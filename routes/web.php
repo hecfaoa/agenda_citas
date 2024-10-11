@@ -103,7 +103,7 @@ Route::get('/add-schedule', function () {
 })->name('add-schedule');
 Route::get('/schedule', [AgendaMedicaController::class,'index'])->name('schedule.index');
 Route::get('/schedule/create', [AgendaMedicaController::class,'create'])->name('schedule.create');
-Route::get('schedule/edit/{cita}', [AgendaMedicaController::class,'edit'])->name('edit-appointment');
+Route::get('schedule/edit/{cita}', [AgendaMedicaController::class,'edit'])->name('edit-schedule');
 Route::post('schedule/update/{cita}', [AgendaMedicaController::class,'update'])->name('update-appointment');
 Route::post('schedule/store/', [AgendaMedicaController::class,'store'])->name('add-appointment');
 Route::get('schedule/show/{cita}', [AgendaMedicaController::class,'show'])->name('show-appointment');

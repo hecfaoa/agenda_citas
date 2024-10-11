@@ -14,17 +14,17 @@
             @endcomponent
             <!-- /Page Header -->
             @if (session('success'))
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                <strong>Success!</strong> {{ session('success') }}.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('fail'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Fail!</strong> {{ session('fail') }}.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> {{ session('success') }}.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if (session('fail'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Fail!</strong> {{ session('fail') }}.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card">
@@ -37,13 +37,13 @@
                                             <h4>Add Schedule</h4>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-12 col-md-6 col-xl-6">
                                         <div class="form-group local-forms">
                                             <label>Doctor <span class="login-danger">*</span></label>
                                             @livewire('select-doctor')
                                             @error('id_medico')
-                                            <span style="color: red">{{$message}}</span>
+                                                <span style="color: red">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@
 
                                             </select>
                                             @error('dia_semana')
-                                            <span style="color: red">{{$message}}</span>
+                                                <span style="color: red">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -71,10 +71,11 @@
                                         <div class="form-group local-forms">
                                             <label>From <span class="login-danger">*</span></label>
                                             <div class="time-icon">
-                                                <input type="text" name="hora_inicio" class="form-control" id="datetimepicker3">
+                                                <input type="text" name="hora_inicio" class="form-control"
+                                                    id="datetimepicker3">
                                             </div>
                                             @error('hora_inicio')
-                                            <span style="color: red">{{$message}}</span>
+                                                <span style="color: red">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -82,14 +83,15 @@
                                         <div class="form-group local-forms">
                                             <label>To <span class="login-danger">*</span></label>
                                             <div class="time-icon">
-                                                <input type="text" name="hora_fin" class="form-control" id="datetimepicker4">
+                                                <input type="text" name="hora_fin" class="form-control"
+                                                    id="datetimepicker4">
                                             </div>
                                             @error('hora_fin')
-                                            <span style="color: red">{{$message}}</span>
+                                                <span style="color: red">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-12">
                                         <div class="doctor-submit text-end">
                                             <button type="submit" class="btn btn-primary submit-form me-2">Create

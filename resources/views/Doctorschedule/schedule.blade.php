@@ -71,7 +71,7 @@
                                                             data-bs-toggle="dropdown" aria-expanded="false"><i
                                                                 class="fa fa-ellipsis-v"></i></a>
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="/schedules/edit/{{ $schedule->id }}"><i
+                                                            <a class="dropdown-item" href="/schedule/edit/{{ $schedule->id_turno }}"><i
                                                                     class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
                                                             <a class="dropdown-item" href="javascript:;"
                                                                 data-bs-toggle="modal" data-bs-target="#delete_patient"><i

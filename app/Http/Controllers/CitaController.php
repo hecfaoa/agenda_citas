@@ -30,7 +30,7 @@ class CitaController extends Controller
     {
         if ($request->getMethod() == "POST") {
             //cambiamos formato fecha 
-
+         
             $fechaFormateada = Cita::getFormatFecha($request->fecha, 'd/m/Y', 'Y-m-d');
             //cambiamos formato hora 24 
 
@@ -38,8 +38,8 @@ class CitaController extends Controller
 
             //validamos la agenda del medico 
 
-            $validateAgenda = Cita::validateAgendaByDayDoctor($request->fecha, $request->hora, $request->doctorSelect);
-
+            $validateAgenda = Cita::validateAgendaByDayDoctor($request->fecha, $request->hora, $request->id_medico);
+       
             if (Count($validateAgenda) > 0) {
 
                 //validamos la cita del paciente 
@@ -54,7 +54,7 @@ class CitaController extends Controller
                     $cita->id_turno = $validateAgenda[0]->id_turno;
                     $cita->fecha = $fechaFormateada;
                     $cita->hora = $horaFormateada;
-                    $cita->hora = 'Confirmada';
+                    $cita->estado = 'Confirmada';
 
                     if ($cita->save()) {
                         return redirect()->route('appointments.index')->with('success', 'Cita se guardo correctamente.');

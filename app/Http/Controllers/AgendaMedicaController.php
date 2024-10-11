@@ -40,10 +40,10 @@ class AgendaMedicaController extends Controller
             //validamos la agenda del medico 
 
 
-            if ($request->dia_semana >= 0 || $request->dia_semana == "0") {
+            if ($request->dia_semana == 0 || $request->dia_semana == "0") {
                 return redirect()->route('schedule.create')->with('fail', 'por favor selecciona un dia.');
             }
-            if ($horaFormateadaIni == $horaFormateadaEnd) {
+            if ($horaFormateadaIni >= $horaFormateadaEnd) {
 
                 return redirect()->route('schedule.index')->with('fail', 'Las horas seleccionadas son erroneas.');
             } else {

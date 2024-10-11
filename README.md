@@ -7,6 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+Notas del autor
+
+* el nombre de la base de datos es sistemaagendamiento
+* el motor de base de datos es mysql
+* el servidor es apache 
+* estos se encuentran dentro de el servidor XAMMP 
+* se requiere php >=8.1
+* se recomienda ejecutar el servidos de laravel, en consola se ubica en la carpeta del proyecto y se ejecuta php artisan serve
+* se ingresa al navedor la url http://localhost:8000/
+* el laizquierda esta el menu donde podremos acceder a las diferentes funciones de la app
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -58,6 +69,13 @@ Thank you for considering contributing to the Laravel framework! The contributio
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 ## Security Vulnerabilities
+
+
+
+
+
+
+
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 

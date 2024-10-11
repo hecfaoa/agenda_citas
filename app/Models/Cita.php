@@ -107,7 +107,7 @@ class Cita extends Model
             ->where('hora_inicio', '<=', $hora24)
             ->where('hora_fin', '>', $hora24)
             ->get();
-
+    
 
         return $results;
     }

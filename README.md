@@ -59,6 +59,22 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 ## Security Vulnerabilities
 
+
+Notas del autor
+
+* el nombre de la base de datos es sistemaagendamiento
+* el motor de base de datos es mysql
+* el servidor es apache 
+* estos se encuentran dentro de el servidor XAMMP 
+* se requiere php >=8.1
+* se recomienda ejecutar el servidos de laravel, en consola se ubica en la carpeta del proyecto y se ejecuta php artisan serve
+* se ingresa al navedor la url http://localhost:8000/
+* el laizquierda esta el menu donde podremos acceder a las diferentes funciones de la app
+
+
+
+
+
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License

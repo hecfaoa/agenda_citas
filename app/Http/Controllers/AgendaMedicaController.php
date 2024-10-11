@@ -28,16 +28,16 @@ class AgendaMedicaController extends Controller
 
     public function store(Request $request)
     {
-// dd($request);
-     
+        // dd($request);
+
         if ($request->getMethod() == "POST") {
-            
+
             //cambiamos formato hora 24 
 
             $horaFormateadaIni = Cita::getFormatHora($request->hora_inicio);
             $horaFormateadaEnd = Cita::getFormatHora($request->hora_fin);
 
-            //validamos la agenda del medico 
+
 
 
             if ($request->dia_semana == 0 || $request->dia_semana == "0") {
@@ -72,18 +72,8 @@ class AgendaMedicaController extends Controller
 
     public function edit($id)
     {
-        // $cita = Cita::findOrFail($id);
-        $cita = Cita::with('paciente', 'agendamedica.medico')->where('citas.id', $id)->get();
-        $estados = ['Confirmada' => 'Confirmada', 'Cancelada' => 'Cancelada'];
-
-        $pacientes = Paciente::all();
-        $medicos = Medico::all();
-        $formattedDate = Cita::getFormatFecha($cita[0]->fecha, 'Y-m-d', 'd/m/Y');
-
-        //  dd($cita[0]->estado);
-        // $medicos = AgendaMedica::with('medico')->get();
-
-        return view('Doctorschedule.edit-appointment', compact('cita', 'pacientes', 'medicos', 'formattedDate', 'estados'));
+        $agenda = AgendaMedica::findOrFail($id);
+        return view('Doctorschedule.edit-schedule', compact('agenda'));
     }
 
     public function update(Request $request, $id)
